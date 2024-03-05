@@ -1,6 +1,6 @@
 const form = document.getElementById('form-contact');
-arrayNomes = [];
-arrayContatos = [];
+const arrayNomes = [];
+const arrayContatos = [];
 let linhas = '';
 
 form.addEventListener('submit', function (e) {
@@ -16,7 +16,7 @@ function adicionarContato() {
 
     if (arrayNomes.includes(nomeContato.value) || arrayContatos.includes(parseInt(numeroContato.value))) {
         alert('Nome ou número de contato já foram adicionados na tabela. Confira novamente.')
-    } else if (numeroContato.length = !11) {
+    } else if (numeroContato.value.length !== 11) {
         alert('O numero digitado é invalido, verifique se foi colocado o DD. EX: 31999999999');
     } else {
         arrayNomes.push(nomeContato.value)
